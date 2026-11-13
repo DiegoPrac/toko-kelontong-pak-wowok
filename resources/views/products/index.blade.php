@@ -97,13 +97,17 @@
 </td>
 </tr>
 
-            @empty
-                <tr>
-                    <td colspan="6">
-                        Belum ada produk yang dicatat.
-                    </td>
-                </tr>
-            @endforelse
+@empty
+    <tr>
+        <td colspan="6">
+            @if(request()->filled('cari'))
+                Produk tidak ditemukan.
+            @else
+                Belum ada produk yang dicatat.
+            @endif
+        </td>
+    </tr>
+@endforelse
         </tbody>
     </table>
 </div>

@@ -19,7 +19,6 @@ public function dashboard()
 }
 
 // Menampilkan dan mencari produk
-// Menampilkan dan mencari produk
 public function index(Request $request)
 {
     $products = Product::with('category');
